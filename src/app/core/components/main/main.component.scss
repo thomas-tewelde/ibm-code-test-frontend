@@ -1,0 +1,21 @@
+@import '../../../../themes/variables';
+
+mat-card-header,
+mat-card-actions {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  padding-top: $xl;
+}
+
+mat-card-content {
+  padding-top: $xl;
+  padding-bottom: $xl;
+}
+
+h1 {
+  font-size: $xl;
+}
+.intro {
+  font-size: 1.25rem;
+}

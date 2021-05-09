@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <div class="container" fxLayout="row" fxLayoutAlign="start center">
+    <a [routerLink]="['/']" id="logo" title="ibm">
+      <ibm-logo></ibm-logo>
+    </a>
+
+    <div class="navbar-items">
+      <ng-content select="[items]"></ng-content>
+    </div>
+  </div>
+</mat-toolbar>

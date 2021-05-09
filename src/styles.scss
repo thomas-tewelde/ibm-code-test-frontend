@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+@import './themes/default/style.scss';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.footer-button {
+  display: flex;
+  flex-direction: row-reverse;
+
+  button {
+    margin: 1rem;
+    align-items: flex-end;
+    width: 20rem;
+  }
+}
+
+.footer {
+  color: white;
+  padding: $lg;
+}
+
+main {
+  margin: 0;
+  padding: $lg 0;
+}
+
+/**
+Inspired by the Boostrap 4 Utilities 
+https://getbootstrap.com/docs/4.5/utilities/borders/
+*/
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: $md;
+  padding-left: $md;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-1 {
+  margin-top: $sm !important;
+}
+.mt-2 {
+  margin-top: $md !important;
+}
+.mt-3 {
+  margin-top: $lg !important;
+}
+.mt-4 {
+  margin-top: $xl !important;
+}
+.mt-5 {
+  margin-top: $xxl !important;
+}
+
+.pt-0 {
+  margin-top: 0 !important;
+}
+.pt-1 {
+  margin-top: $sm !important;
+}
+.pt-2 {
+  margin-top: $md !important;
+}
+.pt-3 {
+  margin-top: $lg !important;
+}
+.pt-4 {
+  margin-top: $xl !important;
+}
+.pt-5 {
+  margin-top: $xxl !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/**
+  Material Snakbar
+*/
+.snackbar-success-background {
+  background-color: #28a745;
+}
+.snackbar-error-background {
+  background-color: #d3301a;
+}
+
+ibm-portal,
+ibm-subjects {
+  width: 100%;
+}
+
+mat-card-header {
+  padding: 0 !important;
+}
+
+/**
+  Media Classes
+*/
+
+// 576px => 36rem
+@media (min-width: 36rem) {
+  // 540px => 36rem
+  .container,
+  .container-sm {
+    max-width: 33.75rem;
+  }
+}
+
+// 768px => 48rem
+@media (min-width: 48rem) {
+  // 720px => 45rem
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 45rem;
+  }
+}
+
+// 992px => 62rem
+@media (min-width: 62rem) {
+  // 960px => 60rem
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 60rem;
+  }
+}
+
+// 1200px => 75rem
+@media (min-width: 75rem) {
+  // 1140px => 71.25rem
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 71.25rem;
+  }
+}
