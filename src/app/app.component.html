@@ -1,25 +1,23 @@
 <div fxLayout="column" fxFlexFill>
-    <div class="navbar">
-      <ibm-navbar>
-        <ng-container items>
-            <div fxLayout="row" fxLayoutAlign="space-between center" >
-                <a *ngIf="isAuthenticated" mat-button [routerLink]="['/portal/subjects']">
-                    <mat-icon>local_library</mat-icon>            
-                    <span>Subjects</span>
-                  </a>
-        
-                  <a *ngIf="isAuthenticated" mat-button (click)="onLogoutClicked()">
-                    <mat-icon>logout</mat-icon>            
-                  </a>
-            
-            </div>
-          
-        </ng-container>
-      </ibm-navbar>
-    </div>
-    <main fxLayout fxLayoutAlign="center" fxFlex>
-      <router-outlet ></router-outlet>
-    </main>
-  
-    <ibm-footer></ibm-footer>
+  <div class="navbar">
+    <ibm-navbar>
+      <ng-container items>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <a *ngIf="isAuthenticated" mat-button [routerLink]="['/portal/subjects']">
+            <mat-icon>local_library</mat-icon>
+            <span>Subjects</span>
+          </a>
+
+          <a *ngIf="isAuthenticated" mat-button (click)="onLogoutClicked()">
+            <mat-icon>logout</mat-icon>
+          </a>
+        </div>
+      </ng-container>
+    </ibm-navbar>
   </div>
+  <main fxLayout fxLayoutAlign="center" fxFlex>
+    <router-outlet></router-outlet>
+  </main>
+
+  <ibm-footer></ibm-footer>
+</div>

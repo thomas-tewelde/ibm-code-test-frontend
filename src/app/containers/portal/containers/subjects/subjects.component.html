@@ -1,27 +1,25 @@
 <div class="container-sm">
   <ibm-main>
-    <ng-container header> 
-        <p>Subjects</p>
-        <mat-divider></mat-divider>
-
-     </ng-container>
+    <ng-container header>
+      <p>Subjects</p>
+      <mat-divider></mat-divider>
+    </ng-container>
     <ng-container intro>
       <mat-spinner *ngIf="!(subjects$ | async)"></mat-spinner>
       <hindsight-ibm-data-table
-        *ngIf="(subjects$ | async)"
+        *ngIf="subjects$ | async"
         [tableColumns]="columnsToDisplay"
         [dataSource]="dataSource$ | async"
         [expandContentTemplateRef]="expandContentTemplate"
-        [customTemplateRef]="{ action: studentsTemplate}"
+        [customTemplateRef]="{ action: studentsTemplate }"
         [showFilter]="true"
       >
       </hindsight-ibm-data-table>
 
       <ng-template #studentsTemplate let-data="data">
-        {{data?.user?.length || 0}}
+        {{ data?.user?.length || 0 }}
         <mat-icon>south</mat-icon>
       </ng-template>
-
 
       <ng-template #expandContentTemplate let-data="data">
         <ibm-view-students [users]="data?.user"></ibm-view-students>
