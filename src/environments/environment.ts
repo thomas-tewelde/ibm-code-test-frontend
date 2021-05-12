@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://127.0.0.1:3000/api/v1/',
+  baseUrl: 'http://ibmbackend-env.eba-bemfcaqj.ap-southeast-2.elasticbeanstalk.com/api/v1/',
 };
 
 /*
